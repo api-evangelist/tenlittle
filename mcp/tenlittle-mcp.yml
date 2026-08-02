@@ -1,0 +1,22 @@
+generated: '2026-07-21'
+method: searched
+status: platform
+source: https://tenlittle.com/.well-known/openid-configuration
+# Ten Little does not publish its own MCP server. However the store's Shopify
+# Customer Account OIDC discovery document advertises a `customer-account-mcp-api:full`
+# scope, evidencing Shopify's platform-level Customer Account MCP API for the
+# signed-in shopper, authorized through this store's authorization server. This
+# is a Shopify platform surface, not a first-party Ten Little MCP server.
+first_party: false
+server:
+  name: shopify-customer-account-mcp
+  vendor: Shopify (Customer Account MCP API)
+  transport: http
+  authorization_server: https://shopify.com/authentication/26030735465
+  scope: customer-account-mcp-api:full
+  docs: https://shopify.dev/docs/api/customer
+evidence:
+- source: well-known/tenlittle-openid-configuration.json
+  field: scopes_supported
+  value: customer-account-mcp-api:full
+tools: []

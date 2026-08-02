@@ -1,0 +1,23 @@
+generated: '2026-07-21'
+method: searched
+source: live probe of https://tenlittle.com/.well-known/*
+host: https://tenlittle.com
+# NOTE: tenlittle.com is a Shopify-hosted storefront. The OIDC / OAuth discovery
+# documents below are Shopify's platform-level "Customer Account" authorization
+# server for this store (issuer shopify.com/authentication/26030735465), served
+# from the tenlittle.com domain. They are genuinely reachable here, but they are
+# Shopify platform surfaces, not a first-party Ten Little developer API.
+documents:
+- path: /.well-known/openid-configuration        # OIDC discovery (RFC 8414 / OIDC Discovery 1.0)
+  status: 200
+  file: tenlittle-openid-configuration.json
+- path: /.well-known/oauth-authorization-server   # OAuth 2.0 Authorization Server Metadata (RFC 8414)
+  status: 200
+  file: tenlittle-oauth-authorization-server.json
+- path: /.well-known/security.txt                 # RFC 9116
+  status: 404
+- path: /.well-known/api-catalog                  # RFC 9727
+  status: 404
+- path: /.well-known/ai-plugin.json               # OpenAI plugin manifest
+  status: 404
+issuer: https://shopify.com/authentication/26030735465

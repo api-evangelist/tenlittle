@@ -1,8 +1,25 @@
 aid: tenlittle
-name: Tenlittle
-description: Tenlittle is a company surfaced as a portfolio company of kindred-ventures and added to the
-  API Evangelist network as a stub for enrichment. This profile is a lead awaiting the enrichment pipeline.
+name: Ten Little
+description: Ten Little is a direct-to-consumer children's footwear and essentials brand that designs healthy,
+  non-toxic shoes for babies and kids. Its APMA-approved shoes use a proprietary TenForm Fit System — wide,
+  foot-shaped toe boxes and flexible zero-drop soles grounded in medical and biomechanical research — to support
+  natural movement and healthy foot development at every size and stage, and to accommodate AFO/SMO orthotics and
+  braces. The brand sells online through a Shopify storefront and publishes no first-party developer API; the only
+  API surfaces reachable on its domain are Shopify's platform-level Customer Account OIDC/OAuth and MCP endpoints.
 url: https://raw.githubusercontent.com/api-evangelist/tenlittle/refs/heads/main/apis.yml
+accessModel:
+  pricing: unknown
+  onboarding: self-serve
+  trial: false
+  try_now: false
+  public: false
+  label: Self-serve signup
+  confidence: medium
+  source:
+  - authentication
+  generated: '2026-07-22'
+  method: derived
+image: https://tenlittle.com/cdn/shop/t/47/assets/social_preview_1024x.png
 x-type: company
 x-source: vc-portfolio
 x-backed-by:
@@ -11,9 +28,16 @@ x-tier: stub
 x-tier-reason: portfolio-lead
 specificationVersion: '0.20'
 created: '2026-07-17'
-modified: '2026-07-17'
+modified: '2026-07-21'
 tags:
 - Company
+- Retail
+- E-commerce
+- Consumer Goods
+- Children
+- Footwear
+- Direct-to-Consumer
+- Shopify
 apis: []
 maintainers:
 - FN: Kin Lane
@@ -21,5 +45,30 @@ maintainers:
 - FN: APIs.json
   email: info@apis.io
 common:
+- type: DomainSecurity
+  url: security/tenlittle-domain-security.yml
+- type: WellKnown
+  url: well-known/tenlittle-well-known.yml
+- type: Authentication
+  url: authentication/tenlittle-authentication.yml
+- type: OAuthScopes
+  url: scopes/tenlittle-scopes.yml
+- type: MCPServer
+  url: mcp/tenlittle-mcp.yml
+- type: Blog
+  url: https://tenlittle.com/blogs/give-a-little
+- type: Support
+  url: https://tenlittle.com/pages/faq
+- type: TermsOfService
+  url: https://tenlittle.com/pages/terms
+- type: PrivacyPolicy
+  url: https://tenlittle.com/pages/privacy
+- type: Login
+  url: https://tenlittle.com/account/login
 - type: Website
   url: https://tenlittle.com/
+x-enrichment:
+  date: '2026-07-21'
+  status: minimal
+  artifacts_added: 6
+  pass: local-v1
