@@ -1,6 +1,7 @@
 generated: '2026-07-21'
 method: searched
-status: platform
+status: published
+status_raw: platform
 source: https://tenlittle.com/.well-known/openid-configuration
 # Ten Little does not publish its own MCP server. However the store's Shopify
 # Customer Account OIDC discovery document advertises a `customer-account-mcp-api:full`
